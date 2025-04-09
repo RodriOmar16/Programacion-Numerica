@@ -2,10 +2,6 @@ package calculadora;
 
 import javax.swing.JOptionPane;
 
-/**
- *
- * @author El código de Adrian
- */
 public class CalculadoraDerivada extends javax.swing.JFrame {
 
     Derivadas derivada;

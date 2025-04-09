@@ -2,7 +2,7 @@
 public class main {
 
 	public static void main(String[] args) {
-		Polinomio p = new Polinomio(3);
+		Polinomio p = new Polinomio(4);
 		
 		p.cargarArray();
 		//p.cargarArrayLagrange();
@@ -10,13 +10,13 @@ public class main {
 		p.mostrarCoef();
 		System.out.println();
 		
-		/*double a = 1,  c[] = new double[p.getCantTerminos()];
-		System.out.println("P("+a+") = "+p.evaluarPolinomio(a));
+		/*double a = 0.5,  c[] = new double[p.getCantTerminos()];
+		//System.out.println("P("+a+") = "+p.evaluarPolinomio(a));
 		c = p.hornerSimpleCaso1(a);
 		mostrarCoefHorner(c, 1, p.getCantTerminos());
 		System.out.println("P("+a+") = "+c[0]);*/
 		
-		/*double a = 5, b=-2,  c[] = new double[p.getCantTerminos()];
+		/*double a = 2, b=2,  c[] = new double[p.getCantTerminos()];
 		c = p.hornerSimpleCaso2(a,b);
 		mostrarCoefHorner(c, 1, p.getCantTerminos());
 		System.out.println("P("+a+") = "+c[0]);*/
@@ -25,17 +25,17 @@ public class main {
 		mostrarCoefHorner(c,2,p.getCantTerminos());
 		System.out.println("R(x) = "+c[1]+"x "+(c[0] > 0? "+"+c[0] : c[0] ));*/
 		
-		/*double r = p.newtonPolinomios(1, 0.0001);
+		/*double r = p.newtonPolinomios(0.5, 0.000001);
 		System.out.println("Raiz aproximada: "+r);*/
 		
 		/*p.detEnteras();
 		int n = p.getCantEnteras();
 		if(n > 0) mostrarArray(p.getRaicesEnteras(), n);  
-		else System.out.println("No admite raíces enteras.");*/
+		else System.out.println("No admite raíces enteras.");
 		
-		/*p.detRacionales();
+		p.detRacionales();
 		double[] r = p.getRaicesRacionales();
-		int n = p.getCantRacionales();
+		n = p.getCantRacionales();
 		if(n > 0) {
 			mostrarArray(r,n);
 		}else System.out.println("No admite raíces racionales.");*/
@@ -43,14 +43,14 @@ public class main {
 		//mostrarArray(p.getCoef(), p.getCantTerminos());
 		
 		/*double cotas[] = new double [2];
-		cotas = p.detCotas(3, 4);
-		System.out.println("cotas[3]: "+cotas[3]);
-		System.out.println("cotas[2]: "+cotas[2]);
-		System.out.println("cotas[1]: "+cotas[1]);
-		System.out.println("cotas[0]: "+cotas[0]);*/
+		cotas = p.detCotas(3,2.7); // (método , valor_inicial)
+		System.out.println("Cota Superior Positiva - cotas[3]: "+cotas[3]);
+		System.out.println("Cota Inferior Positiva - cotas[2]: "+cotas[2]);
+		System.out.println("Cota Superior Negativa - cotas[1]: "+cotas[1]);
+		System.out.println("Cota inferior Negativa - cotas[0]: "+cotas[0]);*/
 		
-		double epsilon = 0.00001, r = 2, s = -2; int max = 10000;
-		p.bairstow(epsilon, r, s, max);
+		/*double epsilon = 0.00001, r = 2, s = -2; int max = 10000;
+		p.bairstow(epsilon, r, s, max);*/
 		
 	}
 	

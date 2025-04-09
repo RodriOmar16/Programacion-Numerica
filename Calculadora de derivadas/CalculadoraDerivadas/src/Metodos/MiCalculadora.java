@@ -7,12 +7,12 @@ public class MiCalculadora {
 	public static int n = 0, m = 0;
 	
 	public static void main(String[] args) throws Exception {
-		String expresion = "x-cos(x)"; //(10*(e^(x/2)))*cos(2*x)-4 //(e^(-x))-(3*(x^2))//sin(x)/(x-2)//(x-1)^2//(e^x)-(x^2)+1
+		String expresion = "(e^x)-(x^2)+1"; //(10*(e^(x/2)))*cos(2*x)-4 //(e^(-x))-(3*(x^2))//sin(x)/(x-2)//(x-1)^2//(e^x)-(x^2)+1
 		//1/((3*sin(x))-x)//(1+sin(x))/x
 	        
         Funcion funcion = new Funcion();
         funcion.setFuncion(expresion);
-        double a = 0, b = 1, epsilon = 0.000001, c;
+        double a = -1.5, b = -1, epsilon = 0.000001, c;
         System.out.println("funcion: "+funcion.getFuncion());
         
         
@@ -32,8 +32,8 @@ public class MiCalculadora {
         /*c=newtonRaphson(funcion,a,epsilon);
         System.out.println("Newton-Raphson: "+c);*/
         //Punto Fijo
-        /*c = puntoFijo(epsilon);
-        System.out.println("\nPto. fijo: "+c);*/
+        c = puntoFijo(epsilon);
+        System.out.println("\nPto. fijo: "+c);
         //Aiken
         /*c = aitken(epsilon);
         System.out.println("\nAitken: "+c);*/
@@ -105,11 +105,11 @@ public class MiCalculadora {
 	
 	private static double puntoFijo(double  epsilon) {
 		n = 0; m = 0;
-		String expresion = "(x)^(1/3)"; //((3*(x^2))+3)^(1/4)//1/((3*sin(x)-x))//(1+sin(x))/x//(sin(x)/(x+1))+1//e^((1/x)+1)
+		String expresion = "sqrt(sin(x) + 1)"; //((3*(x^2))+3)^(1/4)//1/((3*sin(x)-x))//(1+sin(x))/x//(sin(x)/(x+1))+1//e^((1/x)+1)
 		
 		Funcion g = new Funcion();
 		g.setFuncion(expresion);
-		double xi, xiMas1 = -2; //valor inicial
+		double xi, xiMas1 = 1; //valor inicial
 		int i = 0;
 		do {
 			xi = xiMas1;

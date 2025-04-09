@@ -159,12 +159,12 @@ public class Polinomio {
     public double newtonPolinomios(double xn1, double epsilon) {
     	double xn;
     	double[] dpP = new double[2];
-    	
+    	System.out.println("xn1: " + xn1);
     	do {
     		xn = xn1;
-        	dpP = hornerNewton(xn1);
+        	dpP = hornerNewton(xn);
         	xn1 = xn - (dpP[0]/dpP[1]);
-        	System.out.println("xn: "+xn+"\nxn1: "+xn1);
+        	System.out.println("xn: "+xn+"\t xn1: "+xn1);
         }while(Math.abs(xn1 - xn) > epsilon);
       
     	return xn1;
