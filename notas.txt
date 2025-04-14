@@ -1,17 +1,8 @@
-Clase Matriz: 
-	- matriz de double a[n][m]
-	- orden:  n x m
-	- matriz de términos independientes: b[n][1] 
-Métodos_clase:
-	- cargar					LISTO
-	- mostrar					LISTO
-	- getMatrizCoef					LISTO
-	- getMatrizTermIndep				LISTO
-	- getMatrizAmpliada				LISTO
-	- rangoAmpliada(a[m][n],b[n][1])
-	- rangoCoef(a[m][n], b[n][1]);
-	- determinante(a[][], n)			LISTO
-	- condNSFactorizacion(a[][], n);
-	- factorizacionLU(a[][], b[][], n);
-	- eliminacion_gaussiana(a[][], n, b[][])
-	- gauss_jordan(a[][], n, b[][]);
+Desde mi_rama: 
+ - Sincronizar mi_rama con el repositorio remoto (origin/mi_rama): git pull origin mi_rama
+ - Traer los cambios de master a mi_rama: git pull origin main
+ - Cambiar de rama a master: git checkout master
+Desde master:
+ - Sincronizar master local con origin/master: git pull origin master
+ - Fusionar mi_rama dentro de master: git merge mi_rama o bien git rebase mi_rama
+ - Enviar los cambios de la master local a la origin/main: git push origin main

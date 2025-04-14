@@ -14,15 +14,15 @@ public class Main {
 			double det = a.detMatriz(2);
 			//System.out.println("det: "+ det);
 			if(det != 0) {
-				//double x[] = new double[orden[0]];
+				double x[] = new double[orden[0]];
 				//x = a.resolucionSistDiagonal();
 				//x = a.resolucionSistTriangularSuperior(a.getMatrizCoef(),orden[0],a.getMatrizTermIndep());
 				//x = a.resolucionSistTriangularInferior(a.getMatrizCoef(),orden[0],a.getMatrizTermIndep());
 				//mostrarResultado(x, orden[0]);
 				
 				//a.factorizacionLU();
-				//a.factorizacionLUgauss();
-				/*System.out.println("\nMatriz L: ");
+				/*a.factorizacionLUgauss();
+				System.out.println("\nMatriz L: ");
 				mostrarMatriz(a.getL(),orden[0], orden[0]);
 				System.out.println("\nMatriz U: ");
 				mostrarMatriz(a.getU(),orden[0], orden[0]);*/
@@ -47,7 +47,7 @@ public class Main {
 				
 				/*double x[][] = new double[orden[0]][1];
 				x[0][0] = 2; 	x[1][0] = 1; 	x[2][0] = 1;
-				x = a.mejoramientoIterativo(x, orden[0], 0.001);
+				/*x = a.mejoramientoIterativo(x, orden[0], 0.001);
 				System.out.println("\nMuestra del r:");
 				mostrarMatriz(x,orden[0],1);*/
 				
@@ -62,11 +62,11 @@ public class Main {
 				/*x = a.metodoSOR(0.001, 0.8);
 				mostrarResultado(x,orden[0]);*/
 				
-				double x[][] = new double[orden[0]][1];
+				/*double x[][] = new double[orden[0]][1];
 				x[0][0] = 0; 	x[1][0] = 0; 	x[2][0] = 0;
 				x = a.relajamiento(x, orden[0], 0.05);
 				System.out.println("\nMuestra del r:");
-				mostrarMatriz(x,orden[0],1);
+				mostrarMatriz(x,orden[0],1);*/
 				
 			}else System.out.println("La matriz de coeficiente no es inversible(Determinante <> 0). No es posible continuar");
 		}else {

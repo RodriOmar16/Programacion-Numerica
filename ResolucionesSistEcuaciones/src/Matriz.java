@@ -1,5 +1,4 @@
 
-import java.util.NoSuchElementException;
 import java.util.Scanner;
 
 public class Matriz {
@@ -997,14 +996,22 @@ public class Matriz {
 		Matriz A = new Matriz(n,n);
 		A.setMatrizCoef(this.matrizCoef, n,n);
 		
+		//r = Ax - b
 		r=sumaMatrices(b, n, 1, productoX1Escalar(productoMatricial(A.getMatrizCoef(),n,n,x0,nx0,1),n,1,-1),n,1);	
+		// calculo || r ||
 		normaResiduo = norma1Matriz(r, n, 1);
 		
 		while(normaResiduo != 0 || normaResiduo >= epsilon) {
+						
 			A.setMatrizTermIndep(r, n);
-			z0 = convertirAmatriz(A.eliminacionGaussiana(),n);
-			x0 = sumaMatrices(x0,n,1,z0,n,1); //x0 + z0
 			
+			// resuelvo el sistema Az = r
+			z0 = convertirAmatriz(A.eliminacionGaussiana(),n);
+
+			// x = x0 + z0
+			x0 = sumaMatrices(x0,n,1,z0,n,1);
+			
+			// r = Ax -b
 			r=sumaMatrices(b, n, 1, productoX1Escalar(productoMatricial(A.getMatrizCoef(),n,n,x0,nx0,1),n,1,-1),n,1);
 			normaResiduo = norma1Matriz(r, n, 1);
 		}
