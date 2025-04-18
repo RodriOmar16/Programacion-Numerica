@@ -1,7 +1,7 @@
 public class main {
 
 	public static void main(String[] args) {
-		funcionEmpirica f = new funcionEmpirica(5);
+		funcionEmpirica f = new funcionEmpirica(4);
 		
 		f.cargarListaPtos();
 		if(f.controlarPtos()) {
