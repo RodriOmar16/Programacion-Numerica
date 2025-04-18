@@ -19,17 +19,16 @@ public class main {
 		System.out.println("\nMostrar Polinomio interpolante por Lagrange:");
 		p.mostrarPolinomioInterpolante();*/
 		
-		p.newton(false);
+		/*p.newton(false);
+		System.out.println("\nMostrar Polinomio interpolante por Newton:");
+		p.mostrarPolinomioInterpolante();*/
+		
+		p.newton(true);
 		System.out.println("\nMostrar Polinomio interpolante por Newton:");
 		p.mostrarPolinomioInterpolante();
-		
-		//p.newtonOsculacion();
-		//System.out.println("\nMostrar Polinomio interpolante por Newton OSCULACION:");
-		//p.mostrarPolinomioInterpolante();
 	}
 
 }
-
 
 
 
