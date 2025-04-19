@@ -1,22 +1,23 @@
+package Diferenciacion;
+
 import Metodos.Funcion;
 
-public class main {
-	
-	public static double listaPtos[][];
+public class Test {
+
+public static double listaPtos[][];
 	
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
 		Funcion f = new Funcion();
-		f.setFuncion("x*e^x");
+		f.setFuncion("tan(x)"); //^
 		//System.out.println("funcion: "+f.getFuncion());
-		//f.evaluar(1.15);
-		//System.out.println("f(x0): "+f.getResultadoFuncion());
+		f.evaluar(1.15);
+		System.out.println("f(x0): "+f.getResultadoFuncion());
 		
 		
-		double x0 = 2.0, h = 0.1; int m = 3;
-		System.out.println("f'(x) aprox.: "+derivadaProgresiva(f,x0, h));
-		System.out.println("f'(x) aprox.: "+derivadaRegresiva(f,x0, -1*h));
-		System.out.println("f'(x) aprox.: "+derivadaCentrada(f,x0, h));
+		double x0 = Math.sqrt(2), h = 0.1; int m = 3;
+		//System.out.println("f'(x) aprox.: "+derivadaProgresiva(f,x0, h));
+		//System.out.println("f'(x) aprox.: "+derivadaRegresiva(f,x0, -1*h));
+		//System.out.println("f'(x) aprox.: "+derivadaCentrada(f,x0, h));
 		//System.out.println("La derivada por Richardson: "+richardson(f, x0, h, m));
 		
 		//double i; 
@@ -149,4 +150,5 @@ public class main {
 		}
 		return D[m][m];
 	}
+
 }

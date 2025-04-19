@@ -1,5 +1,7 @@
 package Metodos;
 
+import java.util.jar.JarException;
+
 import org.nfunk.jep.JEP;
 
 public class Funcion {
@@ -13,7 +15,7 @@ public class Funcion {
     
     
     public Funcion(){
-        //...
+    	jep = new JEP();
     }
     
     public String getFuncion(){
@@ -36,7 +38,7 @@ public class Funcion {
     }
     
     public void evaluar(double nro){
-        jep = new JEP();
+        
         
         this.jep.addStandardFunctions();
         this.jep.addStandardConstants();
@@ -48,7 +50,6 @@ public class Funcion {
     }
     
     public double evaluar2(double nro){
-        jep = new JEP();
         
         this.jep.addStandardFunctions();
         this.jep.addStandardConstants();
