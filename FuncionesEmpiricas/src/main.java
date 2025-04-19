@@ -1,15 +1,15 @@
 public class main {
 
 	public static void main(String[] args) {
-		funcionEmpirica f = new funcionEmpirica(6);
+		funcionEmpirica f = new funcionEmpirica(5);
 		
 		f.cargarListaPtos();
 		if(f.controlarPtos()) {
 			f.mostrarListaPtos();
-			f.linealizacion("Potencial");
+			f.linealizacion("Lineal");
 			System.out.println("\nLuego de linealizar:");
-			//f.puntosSeleccionados(1,3);
-			f.desvios();
+			f.puntosSeleccionados(1,4);
+			//f.desvios();
 			//f.minimosCuadrados();
 			System.out.println("\nParámetros alfa: "+f.getA()); // Valor linealidazos
 			System.out.println("\nParámetros beta: "+f.getB()); // Valor Linealizados

@@ -7,13 +7,17 @@ public class main {
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 		Funcion f = new Funcion();
-		f.setFuncion("4*sin(x)*cos(x)");
-		/*System.out.println("funcion: "+f.getFuncion());
-		f.evaluar(1.15);
-		System.out.println("f("+0+"): "+f.getResultadoFuncion());*/
-		System.out.println("f'(x) aprox.: "+derivadaCentrada(f,1.5707963267949, 1));
-		double x0 = 1.5707963267949, h = 1; int m = 2;
-		System.out.println("La derivada por Richardson: "+richardson(f, x0, h, m));
+		f.setFuncion("x*e^x");
+		//System.out.println("funcion: "+f.getFuncion());
+		//f.evaluar(1.15);
+		//System.out.println("f(x0): "+f.getResultadoFuncion());
+		
+		
+		double x0 = 2.0, h = 0.1; int m = 3;
+		System.out.println("f'(x) aprox.: "+derivadaProgresiva(f,x0, h));
+		System.out.println("f'(x) aprox.: "+derivadaRegresiva(f,x0, -1*h));
+		System.out.println("f'(x) aprox.: "+derivadaCentrada(f,x0, h));
+		//System.out.println("La derivada por Richardson: "+richardson(f, x0, h, m));
 		
 		//double i; 
 		/*i = trapecio(f,0,2,1);
@@ -26,16 +30,22 @@ public class main {
 		
 	}
 	
-	public static double derivadaProgresiva(Funcion f,double x0, double h) {
-		double fx0 = f.evaluar2(x0), fx0h = f.evaluar2(x0 + h);
+	public static double derivadaProgresiva(Funcion f,double x0, double incremento) {
+		double fx0  = f.evaluar2(x0),
+			   h    = Math.abs(incremento),
+			   fx0h = f.evaluar2(x0 + h);
 		return ((fx0h - fx0)/h);
 	}
-	public static double derivadaRegresiva(Funcion f,double x0, double h) {
-		double fx0 = f.evaluar2(x0), fx0h = f.evaluar2(x0 + h);
+	public static double derivadaRegresiva(Funcion f,double x0, double decremento) {
+		double fx0  = f.evaluar2(x0),
+			   h    = Math.abs(decremento),
+			   fx0h = f.evaluar2(x0 - h);
 		return ((fx0 - fx0h)/h);
 	}
-	public static double derivadaCentrada(Funcion f,double x0, double h) {
-		double fx0hN = f.evaluar2(x0 - h), fx0h = f.evaluar2(x0 + h);
+	public static double derivadaCentrada(Funcion f,double x0, double incdec) {
+		double  h     = Math.abs(incdec),
+				fx0hN = f.evaluar2(x0 - h), 
+				fx0h  = f.evaluar2(x0 + h);
 		return ((fx0h - fx0hN)/(2*h));
 	}
 	public static double richardson(Funcion f, double x0, double h, int m) {
@@ -48,7 +58,7 @@ public class main {
 			System.out.println("D["+n+"][0]: "+D[n][0]);
 			for(int k=1; k<=n ;k++) {
 				D[n][k] = D[n][k-1] + (D[n][k-1] - D[n-1][k-1])/((Math.pow(4, k))-1);
-				System.out.println("D["+n+"]["+k+"]: "+D[n][k]);
+				System.out.println("D["+n+"]["+k+"]: "+D[n][k]+"\t");
 			}
 		}
 		return D[m][m];
