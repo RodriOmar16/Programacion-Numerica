@@ -8,7 +8,7 @@ public static double listaPtos[][];
 	
 	public static void main(String[] args) {
 		Funcion f = new Funcion();
-		f.setFuncion("tan(x)"); //^
+		f.setFuncion("(x^3)/(1+(sqrt(x)))"); //^
 		//System.out.println("funcion: "+f.getFuncion());
 		f.evaluar(1.15);
 		System.out.println("f(x0): "+f.getResultadoFuncion());
@@ -20,14 +20,14 @@ public static double listaPtos[][];
 		//System.out.println("f'(x) aprox.: "+derivadaCentrada(f,x0, h));
 		//System.out.println("La derivada por Richardson: "+richardson(f, x0, h, m));
 		
-		//double i; 
-		/*i = trapecio(f,0,2,1);
-		System.out.println("Trapecio: "+i);*/
+		double i; 
+		/*i = trapecio(f,1,2,2);  // funcion, a, b, veces
+		System.out.println("\nTrapecio: "+i);*/
 		
-		/*i = simpson(f,0,2,2);
-		System.out.println("Trapecio: "+i);*/
-		/*i = richardsonRomberg(f,0,2,4,1);
-		System.out.println("RR: "+i);*/
+		/*i = simpson(f,1,2,8);  // funcion, a, b, veces
+		System.out.println("\nSimpsons: "+i);*/
+		i = richardsonRomberg(f,1,2,3,2); // funcion, a, b, m, método (1 trapecio/2 Simpson)
+		System.out.println("RR: "+i);
 		
 	}
 	
