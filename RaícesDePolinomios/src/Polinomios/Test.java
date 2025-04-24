@@ -1,8 +1,9 @@
+package Polinomios;
 
-public class main {
+public class Test {
 
 	public static void main(String[] args) {
-		Polinomio p = new Polinomio(4);
+		Polinomio p = new Polinomio(3);
 		
 		p.cargarArray();
 		//p.cargarArrayLagrange();

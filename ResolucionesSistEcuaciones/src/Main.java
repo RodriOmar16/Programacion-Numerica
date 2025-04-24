@@ -20,9 +20,9 @@ public class Main {
 				//x = a.resolucionSistTriangularInferior(a.getMatrizCoef(),orden[0],a.getMatrizTermIndep());
 				//mostrarResultado(x, orden[0]);
 				
-				//a.factorizacionLU();
-				/*a.factorizacionLUgauss();
-				System.out.println("\nMatriz L: ");
+				a.factorizacionLU();
+				//a.factorizacionLUgauss();
+				/*System.out.println("\nMatriz L: ");
 				mostrarMatriz(a.getL(),orden[0], orden[0]);
 				System.out.println("\nMatriz U: ");
 				mostrarMatriz(a.getU(),orden[0], orden[0]);*/
@@ -38,8 +38,8 @@ public class Main {
 				/*x = a.croutLU1();
 				mostrarResultado(x, orden[0]);*/
 				
-				/*x = a.choleskyUtU();
-				mostrarResultado(x, orden[0]);*/
+				x = a.choleskyUtU();
+				mostrarResultado(x, orden[0]);
 				/*x = a.choleskyLLt();
 				mostrarResultado(x, orden[0]);*/
 				

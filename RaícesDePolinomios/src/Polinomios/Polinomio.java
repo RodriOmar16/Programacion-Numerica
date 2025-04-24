@@ -1,3 +1,4 @@
+package Polinomios;
 import java.util.Scanner;
 
 public class Polinomio {
