@@ -3,7 +3,7 @@ package Polinomios;
 public class Test {
 
 	public static void main(String[] args) {
-		Polinomio p = new Polinomio(3);
+		Polinomio p = new Polinomio(4);
 		
 		p.cargarArray();
 		//p.cargarArrayLagrange();
@@ -11,18 +11,18 @@ public class Test {
 		p.mostrarCoef();
 		System.out.println();
 		
-		/*double a = 0.5,  c[] = new double[p.getCantTerminos()];
+		double a = -2,  c[] = new double[p.getCantTerminos()];
 		//System.out.println("P("+a+") = "+p.evaluarPolinomio(a));
 		c = p.hornerSimpleCaso1(a);
 		mostrarCoefHorner(c, 1, p.getCantTerminos());
-		System.out.println("P("+a+") = "+c[0]);*/
+		System.out.println("P("+a+") = "+c[0]);
 		
 		/*double a = 2, b=2,  c[] = new double[p.getCantTerminos()];
 		c = p.hornerSimpleCaso2(a,b);
 		mostrarCoefHorner(c, 1, p.getCantTerminos());
 		System.out.println("P("+a+") = "+c[0]);*/
 		
-		/*double c[] = p.hornerDobleCaso1(-2.5, 7);
+		/*double c[] = p.hornerDobleCaso1(-1, 1); // siempre mandar con signo distintos (-a , -b)
 		mostrarCoefHorner(c,2,p.getCantTerminos());
 		System.out.println("R(x) = "+c[1]+"x "+(c[0] > 0? "+"+c[0] : c[0] ));*/
 		

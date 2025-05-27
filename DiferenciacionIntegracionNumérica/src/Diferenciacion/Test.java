@@ -8,25 +8,25 @@ public static double listaPtos[][];
 	
 	public static void main(String[] args) {
 		Funcion f = new Funcion();
-		f.setFuncion("(x^3)/(1+(sqrt(x)))"); //^
+		f.setFuncion("(x^3)/(1+sqrt(x))"); //^
 		//System.out.println("funcion: "+f.getFuncion());
-		f.evaluar(1.15);
-		System.out.println("f(x0): "+f.getResultadoFuncion());
+		//f.evaluar(1.15);
+		//System.out.println("f(x0): "+f.getResultadoFuncion());
 		
 		
-		double x0 = Math.sqrt(2), h = 0.1; int m = 3;
+		double x0 = 2, h = 1; int m = 3;
 		//System.out.println("f'(x) aprox.: "+derivadaProgresiva(f,x0, h));
 		//System.out.println("f'(x) aprox.: "+derivadaRegresiva(f,x0, -1*h));
 		//System.out.println("f'(x) aprox.: "+derivadaCentrada(f,x0, h));
 		//System.out.println("La derivada por Richardson: "+richardson(f, x0, h, m));
 		
 		double i; 
-		/*i = trapecio(f,1,2,2);  // funcion, a, b, veces
+		/*i = trapecio(f,0,Math.PI,1);  // funcion, a, b, veces
 		System.out.println("\nTrapecio: "+i);*/
 		
-		/*i = simpson(f,1,2,8);  // funcion, a, b, veces
+		/*i = simpson(f,1,2,4);  // funcion, a, b, veces
 		System.out.println("\nSimpsons: "+i);*/
-		i = richardsonRomberg(f,1,2,3,2); // funcion, a, b, m, método (1 trapecio/2 Simpson)
+		i = richardsonRomberg(f,1,2,2,2); // funcion, a, b, m, método (1 trapecio/2 Simpson)
 		System.out.println("RR: "+i);
 		
 	}

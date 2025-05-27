@@ -32,8 +32,8 @@ public class MiCalculadora {
         /*c=newtonRaphson(funcion,a,epsilon);
         System.out.println("Newton-Raphson: "+c);*/
         //Punto Fijo
-        c = puntoFijo(epsilon);
-        System.out.println("\nPto. fijo: "+c);
+        /*c = puntoFijo(epsilon);
+        System.out.println("\nPto. fijo: "+c);*/
         //Aiken
         /*c = aitken(epsilon);
         System.out.println("\nAitken: "+c);*/

@@ -1,8 +1,8 @@
 
-public class main {
+public class Test {
 
 	public static void main(String[] args) {
-		PolinomioAprox p = new PolinomioAprox(3,2);
+		PolinomioAprox p = new PolinomioAprox(4,2);
 		
 		p.cargarPtos();
 		System.out.println("\nMuestra de los ptos:");
