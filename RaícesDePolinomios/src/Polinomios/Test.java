@@ -3,7 +3,7 @@ package Polinomios;
 public class Test {
 
 	public static void main(String[] args) {
-		Polinomio p = new Polinomio(4);
+		Polinomio p = new Polinomio(3);
 		
 		p.cargarArray();
 		//p.cargarArrayLagrange();
@@ -11,13 +11,13 @@ public class Test {
 		p.mostrarCoef();
 		System.out.println();
 		
-		double a = -2,  c[] = new double[p.getCantTerminos()];
+		/*double a = -2,  c[] = new double[p.getCantTerminos()];
 		//System.out.println("P("+a+") = "+p.evaluarPolinomio(a));
 		c = p.hornerSimpleCaso1(a);
 		mostrarCoefHorner(c, 1, p.getCantTerminos());
-		System.out.println("P("+a+") = "+c[0]);
+		System.out.println("P("+a+") = "+c[0]);*/
 		
-		/*double a = 2, b=2,  c[] = new double[p.getCantTerminos()];
+		/*double a = 3, b= -2,  c[] = new double[p.getCantTerminos()];
 		c = p.hornerSimpleCaso2(a,b);
 		mostrarCoefHorner(c, 1, p.getCantTerminos());
 		System.out.println("P("+a+") = "+c[0]);*/
@@ -43,14 +43,14 @@ public class Test {
 		
 		//mostrarArray(p.getCoef(), p.getCantTerminos());
 		
-		/*double cotas[] = new double [2];
-		cotas = p.detCotas(3,2.7); // (método , valor_inicial)
+		double cotas[] = new double [2];
+		cotas = p.detCotas(2,2); // (método , valor_inicial)
 		System.out.println("Cota Superior Positiva - cotas[3]: "+cotas[3]);
 		System.out.println("Cota Inferior Positiva - cotas[2]: "+cotas[2]);
 		System.out.println("Cota Superior Negativa - cotas[1]: "+cotas[1]);
-		System.out.println("Cota inferior Negativa - cotas[0]: "+cotas[0]);*/
+		System.out.println("Cota inferior Negativa - cotas[0]: "+cotas[0]);
 		
-		/*double epsilon = 0.00001, r = 2, s = -2; int max = 10000;
+		/*double epsilon = 0.00001, r = 1, s = -1; int max = 10000;
 		p.bairstow(epsilon, r, s, max);*/
 		
 	}

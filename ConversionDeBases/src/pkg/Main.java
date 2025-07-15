@@ -3,13 +3,13 @@ package pkg;
 public class Main {
 
 	public static void main(String[] args) {
-        int basePartida = 10, baseLlegada = 8; //base distinta de 10
-        String nro = "1.5";
+        int basePartida = 2, baseLlegada = 3; //base distinta de 10
+        String nro = "1010";
         if(basePartida != baseLlegada){
             if(controlarNro(basePartida, nro)){
                 //System.out.println("todos sus digitos son menores a su base.");
                 String nroEquivalente = "";
-                int metodo = 3;
+                int metodo = 1;
                 switch(metodo){
                     //METODOS PARA LLEGAR A BASE 10
                     case 1 -> nroEquivalente = sumaPonderada(nro, basePartida);
